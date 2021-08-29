@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/BP_fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+
+    <style>
+      .card {
+        margin: 0 auto;
+        float: none; 
+        z-index: 1;
+      }
+      body{
+        overflow-x: hidden;
+      }
+      
+      .toggle {
+        background: white;
+        overflow: auto;
+        position: sticky;
+        max-width: 600px;
+        top:0;
+        left: 0;
+        padding: 15px 0;
+        white-space: nowrap;
+        z-index:3;
+        margin: auto;
+      }
+
+      .links {
+        padding: 10px 30px;
+        border-radius: 5px;
+        background: rgb(179, 238, 89);
+        margin: 0 15px;
+        display: inline-block;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .links a{
+        text-decoration: none;
+        outline: none;
+        color: rgb(34, 31, 31);
+        text-transform: capitalize;
+        transition: 0.3s;
+      }
+      .links:hover {
+        background: #212121;
+      }
+      .links:hover a {
+        color: #fff;
+      }
+      
+      ::-webkit-scrollbar {
+        height: 3px;
+        background: #fff;
+      }
+      ::-webkit-scrollbar-thumb {
+        height: 3px;
+        background: black;
+      } 
+      
+      .cards-box:target{
+        display:block !important;
+      }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a style="left:17%; position: relative;" class="navbar-brand" href="index.html">
+          <img src="img/BP_logo_1.png" alt="" height=50px width=60px style="border-radius: 50%;" >
+          <span style="position:relative ;top:2.5px ;font-family: Verdana, Geneva, Tahoma, sans-serif; letter-spacing: 1px;font-weight: bold; font-size: 23px;">
+            Bluepad
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div style="overflow-x: hidden;" class="collapse navbar-collapse" id="navbarNav">
+          <ul style="left:62%; position: relative;" class="navbar-nav">
+            <li class="nav-item">
+              <a style="color:rgb(0, 0, 0);  font-family: Verdana; font-weight: 800;" 
+              class="nav-link" href="index.html">Home<span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a style="color:rgb(0, 0, 0);  font-family: Verdana; font-weight: 800; " class="nav-link" href="articles.html">Articles</a>
+            </li>
+            <li  class="nav-item">
+              <a style="color:rgb(0, 0, 0);  font-family: Verdana; font-weight: 800;" class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="toggle mb-3">
+        <span class="links"><a href="#all"><i class="fa fa-globe"></i> All</a></span>
+        <span class="links"><a href="#sports"><i class="fa fa-soccer-ball-o"></i> Sports</a></span>
+        <span class="links"><a href="#movies"><i class="fa fa-caret-square-o-right"></i> Movies</a></span>
+        <span class="links"><a href="#food"><i class="fa fa-cutlery"></i> Food</a></span>
+        <span class="links"><a href="#animals"><i class="fa fa-paw"></i> Animals</a></span>
+        <span class="links"><a href="#romantic"><i class="fa fa-heart"></i> Romantic</a></span>
+        <span class="links"><a href="#music"><i class="fa fa-music"></i> Music</a></span>
+        <span class="links"><a href="#trees"><i class="fa fa-tree"></i>Trees</a></span>
+        <span class="links"><a href="#education"><i class="	fa fa-graduation-cap"></i> Education</a></span>
+        <span class="links"><a href="#vehicles"><i class="	fa fa-automobile"></i> Vehicles</a></span>
+      </div>
+
+      <div id="all" style="display: none;" class="cards-box">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div style="margin: auto" class="col-md-3">
+            <img src="img/def_img_3.png" class="card-img" alt="card image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">First Title <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @mrspeare &nbsp</span></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+              <p class="card-text"><small class="text-muted">Posted on 28 Aug 2021</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div style="margin: auto" class="col-md-3">
+            <img src="img/def_img_2.png" class="card-img" alt="card image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">New Title <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @stephenking &nbsp</span></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+              <p class="card-text"><small class="text-muted">Posted on 28 Aug 2021</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div style="margin: auto" class="col-md-3">
+            <img src="img/def_img_1.png" class="card-img" alt="card image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Cool Title <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @orwell &nbsp</span></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+              <p class="card-text"><small class="text-muted">Posted on 27  Aug 2021</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div style="margin: auto" class="col-md-3">
+            <img src="img/def_img_5.png" class="card-img" alt="card image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Super Title <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @charlotte &nbsp</span></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+              <p class="card-text"><small class="text-muted">Posted on 27  Aug 2021</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div style="margin: auto" class="col-md-3">
+            <img src="img/def_img_4.png" class="card-img" alt="card image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Right Title <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @olivertwist &nbsp</span></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+              <p class="card-text"><small class="text-muted">Posted on 26 Aug 2021</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div id="sports" style="display: none;" class="cards-box">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div style="margin: auto" class="col-md-3">
+              <img src="img/def_img_2.png" class="card-img" alt="card image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Cricket <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @mrspeare &nbsp</span></h5>
+                <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                <p class="card-text"><small class="text-muted">Posted on 28 Aug 2021</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div style="margin: auto" class="col-md-3">
+              <img src="img/def_img_5.png" class="card-img" alt="card image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Football <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @stephenking &nbsp</span></h5>
+                <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                <p class="card-text"><small class="text-muted">Posted on 28 Aug 2021</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div style="margin: auto" class="col-md-3">
+              <img src="img/def_img_4.png" class="card-img" alt="card image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">IPL <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @orwell &nbsp</span></h5>
+                <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                <p class="card-text"><small class="text-muted">Posted on 27  Aug 2021</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div style="margin: auto" class="col-md-3">
+              <img src="img/def_img_1.png" class="card-img" alt="card image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Olympics <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @charlotte &nbsp</span></h5>
+                <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                <p class="card-text"><small class="text-muted">Posted on 27  Aug 2021</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div style="margin: auto" class="col-md-3">
+              <img src="img/def_img_3.png" class="card-img" alt="card image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Basketball <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @olivertwist &nbsp</span></h5>
+                <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                <p class="card-text"><small class="text-muted">Posted on 26 Aug 2021</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="movies" style="display: none;" class="cards-box">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div style="margin: auto" class="col-md-3">
+                <img src="img/def_img_5.png" class="card-img" alt="card image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Joker (2019) <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @mrspeare &nbsp</span></h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                  <p class="card-text"><small class="text-muted">Posted on 28 Aug 2021</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div style="margin: auto" class="col-md-3">
+                <img src="img/def_img_3.png" class="card-img" alt="card image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Tenet <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @stephenking &nbsp</span></h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                  <p class="card-text"><small class="text-muted">Posted on 28 Aug 2021</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div style="margin: auto" class="col-md-3">
+                <img src="img/def_img_4.png" class="card-img" alt="card image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Art of Nolan <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @orwell &nbsp</span></h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                  <p class="card-text"><small class="text-muted">Posted on 27  Aug 2021</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div style="margin: auto" class="col-md-3">
+                <img src="img/def_img_1.png" class="card-img" alt="card image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">How to make !! <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @charlotte &nbsp</span></h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                  <p class="card-text"><small class="text-muted">Posted on 27  Aug 2021</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div style="margin: auto" class="col-md-3">
+                <img src="img/def_img_2.png" class="card-img" alt="card image">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">All about Avatar-2 <span style="font-size: 12px;color: blue; background-color: lightgray; border-radius: 15px;">&nbsp @olivertwist &nbsp</span></h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet adipisicing elit. Optio ipsum id nam maxime velit, possimus ex, amet consectetur, nam maxime wil spot. </p>
+                  <p class="card-text"><small class="text-muted">Posted on 26 Aug 2021</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+
+      
+
+      
+</body>
+</html>
