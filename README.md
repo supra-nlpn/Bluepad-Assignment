@@ -1,4 +1,4 @@
 # Bluepad-Assignment
 This is an internship assessment!
  
-checkout this url - https://supra-atkinson.github.io/Bluepad-Assignment/
+checkout this url - https://supra-nlpn.github.io/Bluepad-Assignment/
